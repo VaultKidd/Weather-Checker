@@ -25,7 +25,12 @@
             <div class="nav__links">
               <a class="nav__link link__hover-effect" href="#">Home</a>
               <a class="nav__link link__hover-effect" href="">Search</a>
-              <a class="nav__link link__hover-effect" target="_blank" href="https://vaultkidd.github.io/Updated-portfolio/">Contact</a>
+              <a
+                class="nav__link link__hover-effect"
+                target="_blank"
+                href="https://vaultkidd.github.io/Updated-portfolio/"
+                >Contact</a
+              >
               <a class="nav__link link__hover-effect" href="">Locations</a>
             </div>
           </nav>
@@ -35,7 +40,7 @@
 
     <section id="main">
       <div class="row">
-        <div class="container">
+        <div class="main__container container">
           <div class="intro">
             <h1 class="title">Is It Raining?</h1>
             <h2 class="description">
@@ -45,14 +50,37 @@
             </h2>
           </div>
           <div class="card">
-            <div class="search__tab">
-              <div class="search__bar">
-                <input type="text" placeholder="Enter City Name" />
-              </div>
-              <div class="search__btn">
-                <button>
-                  <i class="fa fa-search"></i>
-                </button>
+            <div class="search__bar">
+              <input type="search" placeholder="Enter City Name" />
+              <button>
+                <i class="fa fa-search" aria-hidden="true"></i>
+              </button>
+            </div>
+            <div class="weather">
+              <img class="temp__icon" src="./assets/rain.png" alt="rain" />
+              <h3 class="temp">22°C</h3>
+              <h3 class="city">New York</h3>
+              <div class="details">
+                <div class="humidity">
+                  <img
+                    class="details__img"
+                    src="./assets/humidity.png"
+                    alt="humidity" />
+                    <br>
+                  <p class="detail__amount">50%</p>
+                  <br>
+                  <p class="detail__title">Humidity</p>
+                </div>
+                <div class="wind">
+                  <img
+                    class="details__img"
+                    src="./assets/wind.png"
+                    alt="humidity" />
+                    <br>
+                  <p class="detail__amount">16 mph</p>
+                  <br>
+                  <p class="detail__title">Wind Speed</p>
+                </div>
               </div>
             </div>
           </div>
@@ -64,11 +92,19 @@
       <div class="row">
         <div class="container container__footer">
           <figure class="personal__logo--wrapper">
-            <img class="personal__logo" src="./assets/personal_logo.png" alt="personal__logo" />
+            <img
+              class="personal__logo"
+              src="./assets/personal_logo.png"
+              alt="personal__logo" />
           </figure>
           <div class="footer__links">
             <a href="#" class="footer__link">Home</a>
-            <a target="_blank" href="https://vaultkidd.github.io/Updated-portfolio/" class="footer__link">Contact</a>
+            <a
+              target="_blank"
+              href="https://vaultkidd.github.io/Updated-portfolio/"
+              class="footer__link"
+              >Contact</a
+            >
           </div>
           <div class="footer__copyright">Copyright © 2023 Igor Kozakiewicz</div>
         </div>
