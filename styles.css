@@ -134,8 +134,10 @@ nav {
   position: absolute;
   outline: none;
   border: none;
-  top: 24px;
+  top: 270px;
   left: 45px;
+  transition: all 800ms ease;
+  z-index: 100;
 }
 
 input {
@@ -186,7 +188,9 @@ input::-webkit-search-cancel-button {
   justify-content: center;
   align-items: center;
   padding-top: 70px;
+  opacity: 0;
 }
+
 
 .temp__icon {
   height: 150px;
@@ -213,7 +217,7 @@ input::-webkit-search-cancel-button {
   width: 150%;
   padding-top: 30px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .details__img {

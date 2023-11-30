@@ -9,7 +9,7 @@
     <script
       src="https://kit.fontawesome.com/c8e4d183c2.js"
       crossorigin="anonymous"></script>
-      <script src="script.js"></script>
+    <script defer src="script.js"></script>
   </head>
 
   <body>
@@ -24,8 +24,7 @@
                 alt="website__logo" />
             </figure>
             <div class="nav__links">
-              <a class="nav__link link__hover-effect" href="#">Home</a>
-              <a class="nav__link link__hover-effect" href="">Search</a>
+              <a class="nav__link link__hover-effect" href=".">Home</a>
               <a
                 class="nav__link link__hover-effect"
                 target="_blank"
@@ -51,25 +50,27 @@
             </h2>
           </div>
           <div class="card">
-            <div class="search__bar">
-              <input type="search" placeholder="Enter City Name" />
-              <button>
-                <i class="fa fa-search" aria-hidden="true"></i>
-              </button>
+            <div id="search__bar" class="search__bar">
+              <form onsubmit="() => checkWeather(); return false;">
+                <input type="search" placeholder="Enter City Name" />
+                <button>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                </button>
+              </form>
             </div>
-            <div class="weather">
-              <img class="temp__icon" src="./assets/rain.png" alt="rain" />
-              <h3 class="temp">22°C</h3>
-              <h3 class="city">New York</h3>
+            <div id="weather" class="weather">
+              <img class="temp__icon" src="./assets/sunny.png" alt="rain" />
+              <h3 class="temp">Temp</h3>
+              <h3 class="city">City</h3>
               <div class="details">
                 <div class="humidity">
                   <img
                     class="details__img"
                     src="./assets/humidity.png"
                     alt="humidity" />
-                    <br>
+                  <br />
                   <p class="detail__amount humidity__percent">50%</p>
-                  <br>
+                  <br />
                   <p class="detail__title">Humidity</p>
                 </div>
                 <div class="wind">
@@ -77,9 +78,9 @@
                     class="details__img"
                     src="./assets/wind.png"
                     alt="wind" />
-                    <br>
-                  <p class="detail__amount wind__speed">16 mph</p>
-                  <br>
+                  <br />
+                  <p class="detail__amount wind__speed">16 km/h</p>
+                  <br />
                   <p class="detail__title">Wind Speed</p>
                 </div>
               </div>
