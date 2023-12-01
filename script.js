@@ -5,7 +5,7 @@ const searchBox = document.querySelector('.search__bar input');
 const searchBtn = document.querySelector('.search__bar button');
 const weatherIcon = document.querySelector('.temp__icon');
 const searchBar = document.querySelector('.search__bar');
-let units = 'imperial&q='
+let units = 'metric&q='
 
 async function checkWeather (city) {
     const response = await fetch(apiUrl + units + city + `&appid=${apiKey}`);
@@ -41,9 +41,10 @@ async function checkWeather (city) {
 }
 
 function switchUnits (units) {
-    if (units === 'imperial&q=') {
-        units === 'metric&q=';
-        location.reload();
+    let url = window.location.href;
+
+    if (url.indexOf('imperial') = 1){
+        
     }
 }
 

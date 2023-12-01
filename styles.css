@@ -348,12 +348,8 @@ input::-webkit-search-cancel-button {
 */
 
 @media (max-width: 480px) {
-  .container {
-    padding: 0;
-  }
   
   nav {
-    transform: scale(0.9);
-    padding: 0;
+    visibility: hidden;
   }
 }
