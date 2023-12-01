@@ -1,13 +1,14 @@
 const apiKey = "516e2e494eba1de1363529fbb76f3445";
-const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=metric&q=";
+const apiUrl = "https://api.openweathermap.org/data/2.5/weather?units=";
 
 const searchBox = document.querySelector('.search__bar input');
 const searchBtn = document.querySelector('.search__bar button');
 const weatherIcon = document.querySelector('.temp__icon');
 const searchBar = document.querySelector('.search__bar');
+let units = 'imperial&q='
 
 async function checkWeather (city) {
-    const response = await fetch(apiUrl + city + `&appid=${apiKey}`);
+    const response = await fetch(apiUrl + units + city + `&appid=${apiKey}`);
     var data = await response.json()
     console.log(data)
     
@@ -39,6 +40,13 @@ async function checkWeather (city) {
     }
 }
 
+function switchUnits (units) {
+    if (units === 'imperial&q=') {
+        units === 'metric&q=';
+        location.reload();
+    }
+}
+
 searchBtn.addEventListener('click', ()=>{
     checkWeather(searchBox.value);
 })
@@ -46,3 +54,4 @@ searchBtn.addEventListener('click', ()=>{
 searchBar.addEventListener('click', ()=>{
     document.getElementById('search__bar').style.top = '24px';
 })
+

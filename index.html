@@ -31,7 +31,11 @@
                 href="https://vaultkidd.github.io/Updated-portfolio/"
                 >Contact</a
               >
-              <a class="nav__link link__hover-effect" href="">Locations</a>
+              <a
+                class="nav__link link__hover-effect--alt" href="#main"
+                onclick="switchUnits()"
+                >Imperial/Metric</a
+              >
             </div>
           </nav>
         </div>
@@ -52,7 +56,7 @@
           <div class="card">
             <div id="search__bar" class="search__bar">
               <form onsubmit="() => checkWeather(); return false;">
-                <input type="search" placeholder="Enter City Name" />
+                <input type="search" placeholder="Enter City, Country" />
                 <button>
                   <i class="fa fa-search" aria-hidden="true"></i>
                 </button>

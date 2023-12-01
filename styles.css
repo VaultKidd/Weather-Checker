@@ -66,6 +66,7 @@ nav {
   text-decoration: none;
   font-weight: 700;
   color: white;
+  transition: all 300ms ease;
 }
 
 .link__hover-effect {
@@ -86,6 +87,10 @@ nav {
 .link__hover-effect:hover:after {
   left: 0;
   width: 100%;
+}
+
+.link__hover-effect--alt:hover {
+  color: rgb(133, 4, 4);
 }
 
 /*
@@ -285,4 +290,41 @@ input::-webkit-search-cancel-button {
 
 .footer__copyright {
   color: white;
+}
+
+
+/*
+
+    SMALL PHONES, TABLETS, LARGE SMARTPHONES
+
+*/
+
+
+@media (max-width: 768px) {
+  .search__bar {
+    max-width: 103%;
+  }
+
+
+  input {
+    max-width: 80%;
+  }
+}
+
+
+/*
+
+    SMALL PHONES
+
+*/
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0;
+  }
+  
+  nav {
+    transform: scale(0.9);
+    padding: 0;
+  }
 }
