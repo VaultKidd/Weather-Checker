@@ -301,13 +301,42 @@ input::-webkit-search-cancel-button {
 
 
 @media (max-width: 768px) {
-  .search__bar {
-    max-width: 103%;
+.main__container {
+  padding: 0;
   }
 
+  .container {
+    padding: 0;
+  }
+
+  .nav__link {
+    margin: 0;
+    padding: 10px 20px;
+  }
+
+  button {
+    visibility: hidden;
+  }
+
+  form {
+    max-width: 100%;
+  }
+
+  .search__bar {
+    right: 130px;
+  }
 
   input {
-    max-width: 80%;
+    max-width: 130%;
+    left: 100px;
+  }
+
+  .card {
+    max-width: 100%;
+  }
+
+  .search__bar {
+    max-width: 70%;
   }
 }
 
