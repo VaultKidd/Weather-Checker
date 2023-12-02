@@ -56,6 +56,9 @@ function setWeatherIcon(weatherCondition) {
     case "Fog":
       weatherIcon.src = "./assets/mist.png";
       break;
+    case "Haze":
+      weatherIcon.src = "./assets/mist.png";
+      break;
     case "Thunderstorm":
       weatherIcon.src = "./assets/heavy-rain.png";
       break;
