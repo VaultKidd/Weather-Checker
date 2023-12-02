@@ -22,7 +22,7 @@ async function checkWeather(city) {
   );
   document.querySelector(".humidity__percent").innerHTML =
     data.main.humidity + "%";
-  document.querySelector(".wind__speed").innerHTML = data.wind.speed + "km/h";
+  document.querySelector(".wind__speed").innerHTML = data.wind.speed + " km/h";
 
   setWeatherIcon(data.weather[0].main);
 }
