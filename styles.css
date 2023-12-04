@@ -31,7 +31,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+p {
   color: white;
 }
 
@@ -190,6 +191,25 @@ button:active {
 
 input::-webkit-search-cancel-button {
   -webkit-appearance: none;
+}
+
+.error__msg {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  padding-top: 150px;
+  font-weight: 900;
+  opacity: 0;
+}
+
+.error__msg--icon {
+  font-size: 200px;
+}
+
+.error__msg--text {
+  font-size: 30px;
 }
 
 .weather {
