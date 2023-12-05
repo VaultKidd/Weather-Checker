@@ -210,6 +210,8 @@ input::-webkit-search-cancel-button {
 
 .error__msg--text {
   font-size: 30px;
+  display: flex;
+  text-align: center;
 }
 
 .weather {

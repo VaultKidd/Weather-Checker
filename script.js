@@ -10,40 +10,48 @@ let units = "metric&q=";
 async function checkWeather(city) {
   const response = await fetch(apiUrl + units + city + `&appid=${apiKey}`);
 
-  if(response.status === 404) {
+  if (response.status === 404) {
     document.querySelector(".error__msg").style.opacity = "1";
     document.querySelector(".error__msg").style.transition = "all 700ms ease";
     document.querySelector(".weather").style.opacity = "0";
-  }
-  else {
+  } else {
     const data = await response.json();
     console.log(data);
-    
+
     document.querySelector(".error__msg").style.opacity = "0";
     document.getElementById("weather").style.opacity = "1";
     document.getElementById("weather").style.transition = "all 700ms ease";
-    
+
     document.querySelector(".city").innerHTML =
-    data.name + ", " + data.sys.country;
+      data.name + ", " + data.sys.country;
     document.querySelector(".temp").innerHTML = getTemperatureString(
       data.main.temp
-      );
-      document.querySelector(".humidity__percent").innerHTML =
-      data.main.humidity + "%";
-      document.querySelector(".wind__speed").innerHTML = data.wind.speed + " km/h";
-      
-      setWeatherIcon(data.weather[0].main);
-    }
-    }
-    
-    function getTemperatureString(tempInCelsius) {
-      if (units === "metric&q=") {
-        return tempInCelsius.toFixed(1) + " °C";
-      } else {
-        return tempInCelsius.toFixed(1) + " °F";
-      }
-    }
-    
+    );
+    document.querySelector(".humidity__percent").innerHTML =
+    data.main.humidity + "%";
+    document.querySelector(".wind__speed").innerHTML = getSpeedString(
+      data.wind.speed
+    );
+
+    setWeatherIcon(data.weather[0].main);
+  }
+}
+
+function getTemperatureString(tempInCelsius) {
+  if (units === "metric&q=") {
+    return tempInCelsius.toFixed(1) + " °C";
+  } else {
+    return tempInCelsius.toFixed(1) + " °F";
+  }
+}
+
+function getSpeedString(kmh) {
+  if (units === "metric&q=") {
+    return kmh.toFixed(2) + " km/h";
+  } else {
+    return kmh.toFixed(1) + " mph";
+  }
+}
 
 function setWeatherIcon(weatherCondition) {
   switch (weatherCondition) {
